@@ -2,18 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/Home_Bloc/Hom_Bloc.dart';
-import 'BottomNavBar.dart';
+import 'App_Bar_Widget.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => HomBloc(),
-
+    return DefaultTabController(
+      length: 4 ,
       child: Scaffold(
-        bottomNavigationBar: const BottomNavBarWidget(),
+        appBar:  AppBarWidget(),
+        body:  TabBarView(
+          children: [
+            Center(child: Text('Groups')),
+            Center(child: Text('Chats')),
+            Center(child: Text('Status')),
+            Center(child: Text('Calls')),
+          ],
+        ),
       ),
     );
   }
