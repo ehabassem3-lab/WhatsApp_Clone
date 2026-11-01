@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../bloc/Home_Bloc/Hom_Bloc.dart';
-import 'App_Bar_Widget.dart';
+import 'package:whats_app/ui/screens/tabs/chat/Chat_Tab_Widget.dart';
+import 'widgets/App_Bar_Widget.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -10,13 +8,14 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      initialIndex: 1,
       length: 4 ,
       child: Scaffold(
         appBar:  AppBarWidget(),
         body:  TabBarView(
           children: [
             Center(child: Text('Groups')),
-            Center(child: Text('Chats')),
+            ChatTabWidget(),
             Center(child: Text('Status')),
             Center(child: Text('Calls')),
           ],

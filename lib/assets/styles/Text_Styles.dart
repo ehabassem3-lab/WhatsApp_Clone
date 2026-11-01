@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class TextStyles {
   static const TextStyle heading = TextStyle(
-    fontSize: 32,
-    fontWeight: FontWeight.bold,
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
     color: Colors.white,
   );
   static const TextStyle headingSmall = TextStyle(

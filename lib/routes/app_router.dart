@@ -9,7 +9,7 @@ class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRoutes.home :
-        return MaterialPageRoute(builder: (_) => const HomePage()) ;
+        return MaterialPageRoute(builder: (_) =>  HomePage()) ;
       default:
         return MaterialPageRoute(
           builder: (_) =>  NotFound_Page()

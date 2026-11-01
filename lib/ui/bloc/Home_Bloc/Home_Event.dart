@@ -1,7 +1,10 @@
+
+import 'package:whats_app/domain/entities/Pop_Out.dart';
+
 abstract class HomeEvents {}
 
-class ChangeBottomNavIndex extends HomeEvents {
-  final int index;
 
-  ChangeBottomNavIndex(this.index);
+class ChangePopOutItem extends  HomeEvents {
+  final SampleItem selectedItem ;
+  ChangePopOutItem(this.selectedItem) ;
 }
