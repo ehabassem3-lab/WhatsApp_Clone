@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whats_app/domain/entities/Chat_Item.dart';
+import 'package:whats_app/routes/app_routes.dart';
 
 class ChatSingleItemWidget extends StatelessWidget {
   final ChatItem chatItem;
@@ -10,12 +11,20 @@ class ChatSingleItemWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5.0),
       child: ListTile(
-        leading: Container(
+        leading: GestureDetector(
+          onTap: () {
+              Navigator.pushNamed(
+                context,
+                AppRoutes.singleProfilePicture,
+                arguments: chatItem.imageUrl,
+              );
+          },
+          child:  Container(
           decoration: BoxDecoration(shape: BoxShape.circle),
-
           width: 70,
           height: 85,
           child: Image.asset(chatItem.imageUrl, fit: BoxFit.fill),
+        ),
         ),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
