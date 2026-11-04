@@ -26,7 +26,15 @@ class ChatSingleItemWidget extends StatelessWidget {
           child: Image.asset(chatItem.imageUrl, fit: BoxFit.fill),
         ),
         ),
-        title: Row(
+        title:GestureDetector( 
+          onTap: () {
+              Navigator.pushNamed(
+                context,
+                AppRoutes.singleChatPage,
+                arguments: chatItem,
+              );
+          },
+          child :  Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(chatItem.name, style: TextStyle(fontWeight: FontWeight.bold)),
@@ -37,6 +45,8 @@ class ChatSingleItemWidget extends StatelessWidget {
                 height: 16,
               ),
           ],
+        ) 
+
         ),
         subtitle: Row(
           children: [

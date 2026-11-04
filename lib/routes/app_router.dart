@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:whats_app/domain/entities/Chat_Item.dart';
 import 'package:whats_app/ui/screens/pages/NotFound_Page.dart';
+import 'package:whats_app/ui/screens/pages/Single_Chat_Page.dart';
 import 'package:whats_app/ui/screens/pages/Single_Profile_Picture_Page.dart';
 
 import '../ui/screens/pages/Home_Page.dart';
@@ -13,6 +14,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) =>  HomePage()) ;
       case AppRoutes.singleProfilePicture:
         return MaterialPageRoute(builder: (_) =>  SingleProfilePicturePage(imageUrl: settings.arguments as String)) ;
+     case AppRoutes.singleChatPage:
+        return MaterialPageRoute(builder: (_) =>  SingleChatPage(chatItem: settings.arguments as ChatItem)) ;
       default:
         return MaterialPageRoute(
           builder: (_) =>  NotFound_Page()
