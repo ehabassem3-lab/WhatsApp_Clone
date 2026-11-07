@@ -12,6 +12,7 @@ import 'package:whats_app/ui/screens/widgets/Chat_Single_Item_Widget.dart';
     isRead: false,
     messageCount: 1,   
     isCertified: true, 
+    hasStory: true,
   ),
   ChatItem(
     imageUrl: 'lib/assets/images/ic_profile2.png',
@@ -21,6 +22,7 @@ import 'package:whats_app/ui/screens/widgets/Chat_Single_Item_Widget.dart';
     isRead: true,
     messageCount: 3,
     isCertified: false,
+    hasStory: false,
   ),
   
  ] ;
